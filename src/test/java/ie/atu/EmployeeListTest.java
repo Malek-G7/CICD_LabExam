@@ -1,3 +1,7 @@
+package ie.atu;
+
+import ie.atu.Employee;
+import ie.atu.EmployeeList;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -24,7 +28,7 @@ public class EmployeeListTest {
         Employee employee2 = new Employee("MALEK_2","123456");
         employeeList.addEmployee(employee1);
         Exception exception = assertThrows(IllegalArgumentException.class,() ->{employeeList.addEmployee(employee2);});
-        assertEquals("Duplicate Employee details found, no object added",exception.getMessage());
+        assertEquals("Duplicate ie.atu.Employee details found, no object added",exception.getMessage());
     }
 
     @Test
