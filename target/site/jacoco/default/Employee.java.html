@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Employee.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">labExam</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Employee.java</span></div><h1>Employee.java</h1><pre class="source lang-java linenums">
+public class Employee {
+    public String name;
+    public String PPS ;
+
+<span class="fc" id="L6">    public Employee(String name, String PPS) {</span>
+<span class="fc" id="L7">        setName(name);</span>
+<span class="fc" id="L8">        setPPS(PPS);</span>
+<span class="fc" id="L9">    }</span>
+
+    public String getName() {
+<span class="fc" id="L12">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="pc bpc" id="L16" title="1 of 4 branches missed.">        if(name.length()&lt;5 || name.length()&gt;22){</span>
+<span class="fc" id="L17">            throw new IllegalArgumentException(&quot;Name provided is not valid&quot;);</span>
+        }
+        else {
+<span class="fc" id="L20">            this.name = name;</span>
+        }
+<span class="fc" id="L22">    }</span>
+
+    public String getPPS() {
+<span class="fc" id="L25">        return PPS;</span>
+    }
+
+    public void setPPS(String PPS) {
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if(PPS.length()!=6){</span>
+<span class="fc" id="L30">            throw new IllegalArgumentException(&quot;PPS number provided is not valid&quot;);</span>
+        }
+        else {
+<span class="fc" id="L33">            this.PPS = PPS;</span>
+        }
+<span class="fc" id="L35">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
